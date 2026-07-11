@@ -26,7 +26,7 @@ as trials and the defaults stay put.
 [PREDICTION.md](PREDICTION.md) was committed before the account was funded: a block
 bootstrap of the train-period backtest predicts one-year PnL of about **+$0.85**
 (80% interval −$0.26 to +$2.37, ~1.6 leg-trades per year). The success criterion is
-calibration — live PnL landing inside that interval — not profitability.
+calibration, which includes live PnL landing inside that interval.
 
 ## Design rules
 
