@@ -1,8 +1,5 @@
 # tsmom-band
 
-**(My paper runner is still doing its weekly cycles, and I'm still in a 30-day cooldown for fractional shares. Also I might bump the budget up to $50 to cover the IBKR commission fee deficit. Will publish more releases as future amendments are made)**
-
---------------------------------
 
 Long/flat time-series momentum across SPY, EFA, IEF and GLD, running live on a $20
 IBKR Pro cash account.
@@ -88,3 +85,7 @@ otherwise.
 Python 3.11+, fully typed (`mypy --strict`), pydantic v2 at module boundaries, polars
 for research (no pandas in `src/execution/` or `src/strategies/`), ib_async for the
 broker connection.
+
+-------------------------------
+**(My paper runner is still doing its weekly cycles, and I'm still in a 30-day cooldown for fractional shares. Will publish more releases as future amendments are made)**
+
