@@ -5,8 +5,8 @@ IBKR Pro cash account.
 
 At that size, IBKR's 1%-of-trade-value commission cap binds on every order and a round
 trip costs 2% of the position. A strategy that trades normally is guaranteed to lose.
-The entire design is therefore organised around *not trading*: the signal is a
-commodity, and the controller — a wide no-trade band — is the substance of the project.
+The entire design is therefore organised around *not trading* the signal is a
+commodity, and the controller (a wide no-trade band) is the substance of the project.
 
 ## The strategy
 
