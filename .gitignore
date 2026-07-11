@@ -1,0 +1,28 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.hypothesis/
+
+# Data (raw and train are reproducible from bootstrap; holdout hash is committed..)
+data/raw/
+data/train/
+data/holdout/*.parquet
+data/holdout/**/*.parquet
+
+# Research output
+research/*.html
+ledgers/
+trials.jsonl
+
+# Runtime
+HALT
+journal.sqlite*
+logs/

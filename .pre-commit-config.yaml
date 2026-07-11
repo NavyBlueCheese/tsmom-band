@@ -1,0 +1,22 @@
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.5.7
+    hooks:
+      - id: ruff
+        args: [--fix]
+      - id: ruff-format
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.11.2
+    hooks:
+      - id: mypy
+        args: [--strict]
+        files: ^src/
+        additional_dependencies: [pydantic, pydantic-settings, numpy, structlog, typer]
+  - repo: local
+    hooks:
+      - id: holdout-hash
+        name: holdout hash unchanged
+        entry: python scripts/check_holdout_hash.py
+        language: system
+        pass_filenames: false
+        always_run: true

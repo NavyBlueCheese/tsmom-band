@@ -1,0 +1,70 @@
+[project]
+name = "twenty"
+version = "0.1.0"
+description = "Cost-aware trend following on a $20 IBKR cash account"
+requires-python = ">=3.11"
+dependencies = [
+    "polars>=1.0",
+    "pydantic>=2.7",
+    "pydantic-settings>=2.3",
+    "numpy>=1.26",
+    "scipy>=1.13",
+    "scikit-learn>=1.5",
+    "ib_async>=1.0",
+    "exchange_calendars>=4.5",
+    "structlog>=24.1",
+    "typer>=0.12",
+    "plotly>=5.22",
+    "yfinance>=0.2.40",
+    "markdown>=3.6",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.2",
+    "hypothesis>=6.100",
+    "mypy>=1.10",
+    "ruff>=0.5",
+    "freezegun>=1.5",
+    "pyarrow>=16.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/twenty"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+# B008: typer's documented pattern puts typer.Option() in argument defaults.
+ignore = ["B008"]
+
+[tool.mypy]
+python_version = "3.12"
+mypy_path = "src"
+explicit_package_bases = true
+strict = true
+
+[[tool.mypy.overrides]]
+module = [
+    "yfinance.*",
+    "ib_async.*",
+    "exchange_calendars.*",
+    "sklearn.*",
+    "scipy.*",
+    "plotly.*",
+    "markdown.*",
+    "pandas.*",
+]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
