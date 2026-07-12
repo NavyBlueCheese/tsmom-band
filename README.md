@@ -1,8 +1,8 @@
 # tsmom-band
 
 
-Long/flat time-series momentum across SPY, EFA, IEF and GLD, running live on a $20
-IBKR Pro cash account.
+Long/flat time-series momentum across SPY, EFA, IEF and GLD (running on a $20
+IBKR Pro cash account)
 
 At that size, IBKR's 1%-of-trade-value commission cap binds on every order and a round
 trip costs 2% of the position. A strategy that trades normally is guaranteed to lose.
