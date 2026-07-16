@@ -1,12 +1,11 @@
 # tsmom-band
 
 
-Long/flat time-series momentum across SPY, EFA, IEF and GLD (running on a $20
+Long/flat time-series momentum across SPY, EFA, IEF and GLD (now running on a $20
 IBKR Pro cash account)
 
 At that size, IBKR's 1%-of-trade-value commission cap binds on every order and a round
-trip costs 2% of the position. The entire design is therefore organized around *not trading* the signal is a
-commodity, and the controller (a wide no-trade band) is the substance of the project.
+trip costs 2% of the position.
 
 ## The strategy
 
